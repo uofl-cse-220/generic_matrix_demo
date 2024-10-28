@@ -68,6 +68,21 @@ public class Main {
         System.out.println("Double Time taken: " + (endTime - startTime) / 1000000 + "ms");
     }
 
+    public static void profileBoxedMatrix(int rows, int cols, int sums) {
+        long startTime = System.nanoTime();
+        BoxedMatrix<Integer> matrix = new BoxedMatrix<>(rows, cols);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix.setEntry(i, j, i + j);
+            }
+        }
+        for (int i = 0; i < sums; i++) {
+            matrix = matrix.add(matrix);
+        }
+        long endTime = System.nanoTime();
+        System.out.println("Boxed Time taken: " + (endTime - startTime) / 1000000 + "ms");
+    }
+
     public static void main(String[] args) {
         // Example usage of IntegerMatrix
         int[][] data = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -93,5 +108,6 @@ public class Main {
         profileSuppressMatrix(rows, cols, sums);
         profileIntegerMatrix(rows, cols, sums);
         profileDoubleMatrix(rows, cols, sums);
+        profileBoxedMatrix(rows, cols, sums);
     }
 }
