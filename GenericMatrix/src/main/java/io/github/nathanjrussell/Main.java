@@ -1,7 +1,5 @@
 package io.github.nathanjrussell;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         // Example usage of IntegerMatrix
@@ -20,6 +18,12 @@ public class Main {
         DoubleMatrix doubleMatrix2 = new DoubleMatrix(doubleData2);
         DoubleMatrix doubleMatrix3 = doubleMatrix.add(doubleMatrix2);
         System.out.println(doubleMatrix3.getEntry(0, 0));
+
+        Integer a = 5;
+        Integer b = 7;
+        Integer c = a+b;
+
+        System.out.println(c);
 
     }
 }
