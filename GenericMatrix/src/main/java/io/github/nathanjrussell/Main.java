@@ -70,28 +70,31 @@ public class Main {
 
     public static void main(String[] args) {
         // Example usage of IntegerMatrix
-        int[][] data = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        IntegerMatrix intMatrix1 = new IntegerMatrix(data);
-        int[][] data2 = {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}};
-        IntegerMatrix intMatrix2 = new IntegerMatrix(data2);
-        IntegerMatrix intMatrix3 = intMatrix1.add(intMatrix2);
-        System.out.println(intMatrix3.getEntry(0, 0));
+//        int[][] data = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//        IntegerMatrix intMatrix1 = new IntegerMatrix(data);
+//        int[][] data2 = {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}};
+//        IntegerMatrix intMatrix2 = new IntegerMatrix(data2);
+//        IntegerMatrix intMatrix3 = intMatrix1.add(intMatrix2);
+//        System.out.println(intMatrix3.getEntry(0, 0));
+//
+//
+//        // Example usage of DoubleMatrix
+//        double[][] doubleData = {{1.1, 2.2, 3.3}, {4.4, 5.5, 6.6}, {7.7, 8.8, 9.9}};
+//        double[][] doubleData2 = {{10.1, 11.1, 12.1}, {13.1, 14.1, 15.1}, {16.1, 17.1, 18.1}};
+//        DoubleMatrix doubleMatrix = new DoubleMatrix(doubleData);
+//        DoubleMatrix doubleMatrix2 = new DoubleMatrix(doubleData2);
+//        DoubleMatrix doubleMatrix3 = doubleMatrix.add(doubleMatrix2);
+//        System.out.println(doubleMatrix3.getEntry(0, 0));
 
-
-        // Example usage of DoubleMatrix
-        double[][] doubleData = {{1.1, 2.2, 3.3}, {4.4, 5.5, 6.6}, {7.7, 8.8, 9.9}};
-        double[][] doubleData2 = {{10.1, 11.1, 12.1}, {13.1, 14.1, 15.1}, {16.1, 17.1, 18.1}};
-        DoubleMatrix doubleMatrix = new DoubleMatrix(doubleData);
-        DoubleMatrix doubleMatrix2 = new DoubleMatrix(doubleData2);
-        DoubleMatrix doubleMatrix3 = doubleMatrix.add(doubleMatrix2);
-        System.out.println(doubleMatrix3.getEntry(0, 0));
-
-        int rows = 5000;
-        int cols = 5000;
-        int sums = 2;
+        int rows = 8000;
+        int cols = 8000;
+        int sums = 6;
         profileMatrix(rows, cols, sums);
         profileSuppressMatrix(rows, cols, sums);
         profileIntegerMatrix(rows, cols, sums);
         profileDoubleMatrix(rows, cols, sums);
+
+
+
     }
 }
