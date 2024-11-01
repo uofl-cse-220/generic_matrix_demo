@@ -7,7 +7,7 @@ public class SuppressErrorMatrix<T extends BetterNumber<T>> {
     protected int numCols;
     protected T[][] entries;
 
-    @SuppressWarnings("unchecked")
+//    @SuppressWarnings("unchecked")
     public SuppressErrorMatrix(int numRows, int numCols) {
         validateDimensions(numRows, numCols);
         this.numRows = numRows;
